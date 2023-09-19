@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/api/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/api",
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.app.json"
+      }
+    },
+    "micro-access-control": {
+      "type": "application",
+      "root": "apps/micro-access-control",
+      "entryFile": "main",
+      "sourceRoot": "apps/micro-access-control/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/micro-access-control/tsconfig.app.json"
+      }
+    }
+  }
+}
